@@ -5,5 +5,5 @@ Music Player
 
 # To do List
 
-- [] Find Music .mp3 files
+- [] Find Music .mp3 file
 - [] Find sound effects .mp3 files
