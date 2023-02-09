@@ -10,15 +10,15 @@ Minim minim;
 AudioPlayer song;
 //
 void setup() {
-   minim = new Minim(this);
-   song = minim,loadfile("../Never Gonna Give You Up Original.mp3");
-   song.loop(0);
+  minim = new Minim(this);
+  song = minim,loadfile("../Never Gonna Give You Up Original.mp3");
+  song.loop(0);
 } //End setup
 //
 void draw() {} //End draw
 //
-void keyPressed() {} //End keypreesed
+void keyPressed() {} //End keyPressed
 //
-void mousePressed() {} //End mousepressed
+void mousePressed() {} //End mousePressed
 //
-//End Main Program
+//End MAIN Program
