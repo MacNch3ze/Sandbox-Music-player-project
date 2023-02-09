@@ -7,12 +7,13 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim;
-AudioPlayer song;
+AudioPlayer song0, song1;
 //
 void setup() {
   minim = new Minim(this);
-  song = minim,loadfile("../Never Gonna Give You Up Original.mp3");
-  song.loop(0);
+  song0 = minim,loadfile("../Music/Never Gonna Give You Up Original.mp3");
+  song1 = minim,loadfile("../Music/AJR WSV.com.mp3");
+  song0.loop(0);
 } //End setup
 //
 void draw() {} //End draw
