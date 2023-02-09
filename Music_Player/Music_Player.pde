@@ -20,8 +20,13 @@ void setup() {
 //
 void draw() {} //End draw
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+  soundEffect0.play();
+
+} //End keyPressed
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+  soundEffect0.rewind();
+} //End mousePressed
 //
 //End MAIN Program
