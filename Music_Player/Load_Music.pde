@@ -1,13 +1,27 @@
 void loadMusic() {
   minim = new Minim(this);
-  song0 = minim.loadFile("../Music/groove.mp3");
-  song1 = minim.loadFile("../Music/The_Simplest.mp3");
-  song2 = minim.loadFile("../Music/Start_Your_Engines.mp3");
-  song3 = minim.loadFile("../Music/Newsroom.mp3");
-  song4 = minim.loadFile("../Music/Ghost_Walk.mp3");
-  song5 = minim.loadFile("../Music/Eureka.mp3");
-  song6 = minim.loadFile("../Music/AJR WSV.mp3");
-  song7 = minim.loadFile("../Music/Never Gonna Give You Up Original.mp3");
-  soundEffect0 = minim.loadFile("../Sound_Effects/Project Name.mp3");
-  soundEffect1 = minim.loadFile("../Sound_Effects/Mouse-Click-03.mp3");
+  //
+  //Concatenation of Pathway + File Name
+  String musicPathway = "../Music/"; // From Sketch to Music File
+  String soundEffectPathway = "../Sound_Effects/"; //From Sketch to sound Effect folder
+  String grooveFileName = "groove.mp3";
+  String The_SimplestFileName = "The_Simplest.mp3";
+  String Start_Your_EnginesFileName = "Start_Your_Engines.mp3";
+  String NewsroomFileName = "Newsroom.mp3";
+  String Ghost_WalkFileName = "Ghost_Walk.mp3";
+  String EurekaFileName = "Eureka.mp";
+  String AJR_WSVFileName = "AJR WSV.mp3";
+  String NGGYUOFileName = "Never Gonna Give You Up Original.mp3";
+  String StopFileName = "Project Name.mp3";
+  String CloseFileName = "Mouse-Click-03.mp3";
+  song0 = minim.loadFile( musicPathway + grooveFileName );
+  song1 = minim.loadFile( musicPathway + The_SimplestFileName );
+  song2 = minim.loadFile( musicPathway + Start_Your_EnginesFileName );
+  song3 = minim.loadFile( musicPathway + NewsroomFileName );
+  song4 = minim.loadFile( musicPathway + Ghost_WalkFileName );
+  song5 = minim.loadFile( musicPathway + EurekaFileName );
+  song6 = minim.loadFile( musicPathway + AJR_WSVFileName );
+  song7 = minim.loadFile( musicPathway + NGGYUOFileName );
+  soundEffect0 = minim.loadFile( soundEffectPathway + StopFileName );
+  soundEffect1 = minim.loadFile( soundEffectPathway + CloseFileName );
 }//End loadMusic
