@@ -13,7 +13,7 @@ void loadMusic() {
   String AJR_WSVFileName = "AJR WSV.mp3";
   String NGGYUOFileName = "Never Gonna Give You Up Original.mp3";
   String StopFileName = "Project Name.mp3";
-  String CloseFileName = "Mouse-Click-03.mp3";
+  String CloseFileName = "Starting.mp3";
   song0 = minim.loadFile( musicPathway + grooveFileName );
   song1 = minim.loadFile( musicPathway + The_SimplestFileName );
   song2 = minim.loadFile( musicPathway + Start_Your_EnginesFileName );

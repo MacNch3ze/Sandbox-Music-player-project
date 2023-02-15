@@ -13,7 +13,7 @@ AudioPlayer soundEffect0, soundEffect1;
 boolean activateWindow=false;
 //
 void setup() {
-  size (300, 300);
+  size (550, 750);
   loadMusic();
   song0.loop(0);
   soundEffect0.loop(0);
@@ -22,20 +22,25 @@ void setup() {
 void draw() {
   if ( activateWindow == true ) background(0);
   //
-  println ( soundEffect0.position(), soundEffect0.length() );
-  println ("When does the sound stop? Indicates delay");
+  //println ( soundEffect0.position(), soundEffect0.length() );
+  //println ("When does the sound stop? Indicates delay");
+  println( soundEffect0.position(), soundEffect0.length() )
   //
 } //End draw
 //
 void keyPressed() {
   //
+  //Play sound effect when pressing a key, including delay
   soundEffect0.play();
   soundEffect0.rewind();
-  delay(2070);
-  println( "KeyPressed:", soundEffect0.length() );
-  if ( key=='0') song0.loop(0);
-  if ( key=='Q' || key=='q' ) exit();
+  delay(2100);
+  //println( "KeyPressed:", soundEffect0.length() );
+  //
+  keyPressedShortcuts();
+  //
+  if ( key==CODED && key==ESC ) soundEffect0.loop(0);
   if ( key==CODED && key==ESC ) exit();
+  int time = 2100
   //
 } //End keyPressed
 //
