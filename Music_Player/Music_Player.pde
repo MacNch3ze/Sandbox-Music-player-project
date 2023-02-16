@@ -16,7 +16,7 @@ void setup() {
   size (550, 750);
   loadMusic();
   song0.loop(0);
-  soundEffect0.loop(0);
+  soundEffect1.loop(0);
 } //End setup
 //
 void draw() {
@@ -24,7 +24,7 @@ void draw() {
   //
   //println ( soundEffect0.position(), soundEffect0.length() );
   //println ("When does the sound stop? Indicates delay");
-  println( soundEffect0.position(), soundEffect0.length() )
+  //println( soundEffect1.position(), soundEffect0.length() );
   //
 } //End draw
 //
@@ -33,14 +33,10 @@ void keyPressed() {
   //Play sound effect when pressing a key, including delay
   soundEffect0.play();
   soundEffect0.rewind();
-  delay(2100);
-  //println( "KeyPressed:", soundEffect0.length() );
+  delay(4000); //milliseconds read from draw() println() debugging
+  //println( "KeyPrekssed:", soundEffect0.length() );
   //
-  keyPressedShortcuts();
-  //
-  if ( key==CODED && key==ESC ) soundEffect0.loop(0);
-  if ( key==CODED && key==ESC ) exit();
-  int time = 2100
+  keyPressedShortCuts();
   //
 } //End keyPressed
 //

@@ -12,8 +12,8 @@ void loadMusic() {
   String EurekaFileName = "Eureka.mp";
   String AJR_WSVFileName = "AJR WSV.mp3";
   String NGGYUOFileName = "Never Gonna Give You Up Original.mp3";
-  String StopFileName = "Project Name.mp3";
-  String CloseFileName = "Starting.mp3";
+  String StopFileName = "Scratch V2.mp3";
+  String OpenFileName = "Starting.mp3";
   song0 = minim.loadFile( musicPathway + grooveFileName );
   song1 = minim.loadFile( musicPathway + The_SimplestFileName );
   song2 = minim.loadFile( musicPathway + Start_Your_EnginesFileName );
@@ -23,5 +23,5 @@ void loadMusic() {
   song6 = minim.loadFile( musicPathway + AJR_WSVFileName );
   song7 = minim.loadFile( musicPathway + NGGYUOFileName );
   soundEffect0 = minim.loadFile( soundEffectPathway + StopFileName );
-  soundEffect1 = minim.loadFile( soundEffectPathway + CloseFileName );
+  soundEffect1 = minim.loadFile( soundEffectPathway + OpenFileName );
 }//End loadMusic
