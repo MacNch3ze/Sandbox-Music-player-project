@@ -10,21 +10,27 @@ Minim minim;
 AudioPlayer song0, song1, song2, song3, song4, song5, song6, song7;
 AudioPlayer soundEffect0, soundEffect1;
 //
-boolean activateWindow=false;
+int time = 7000;
+//
+Boolean activateWindow=false;
 //
 void setup() {
-  size (550, 750);
+  size(550, 750);
   loadMusic();
-  song0.loop(0);
-  soundEffect1.loop(0);
+  //
+  //Illsutrate Garbage Collection of Local Variable
+  //println("Music Pathway is", musicPathway); //local variable doesn't exit outside of void loadMusic() {}
+  //
 } //End setup
 //
 void draw() {
   if ( activateWindow == true ) background(0);
   //
+  //Debugging the Effective Length of the Sound Effect to code a delay
   //println ( soundEffect0.position(), soundEffect0.length() );
   //println ("When does the sound stop? Indicates delay");
-  //println( soundEffect1.position(), soundEffect0.length() );
+  // Debugging a sound to shorten a file play
+  //println( soundEffect1.position(), soundEffect1.length() );
   //
 } //End draw
 //
@@ -37,6 +43,7 @@ void keyPressed() {
   //println( "KeyPrekssed:", soundEffect0.length() );
   //
   keyPressedShortCuts();
+  quitButtons();
   //
 } //End keyPressed
 //

@@ -1,4 +1,5 @@
 void loadMusic() {
+  //
   minim = new Minim(this);
   //
   //Concatenation of Pathway + File Name
@@ -24,4 +25,6 @@ void loadMusic() {
   song7 = minim.loadFile( musicPathway + NGGYUOFileName );
   soundEffect0 = minim.loadFile( soundEffectPathway + StopFileName );
   soundEffect1 = minim.loadFile( soundEffectPathway + OpenFileName );
+  //
+  //println("Music Pathway is", musicPathway);
 }//End loadMusic
