@@ -10,12 +10,12 @@ Minim minim;
 AudioPlayer song0, song1, song2, song3, song4, song5, song6, song7;
 AudioPlayer soundEffect0, soundEffect1;
 //
-int time = 7000;
+int time = 3000;
 //
 Boolean activateWindow=false;
 //
 void setup() {
-  size(550, 750);
+  size(300, 300);
   loadMusic();
   //
   //Illsutrate Garbage Collection of Local Variable
@@ -39,7 +39,7 @@ void keyPressed() {
   //Play sound effect when pressing a key, including delay
   soundEffect0.play();
   soundEffect0.rewind();
-  delay(4000); //milliseconds read from draw() println() debugging
+  delay(2100); //milliseconds read from draw() println() debugging
   //println( "KeyPrekssed:", soundEffect0.length() );
   //
   keyPressedShortCuts();
