@@ -4,18 +4,17 @@ float buttonSide, spaceWidth, spaceHeight;
 float playX1, playY1, pauseX2, pauseY2, pauseWidth;
 float pauseX1, pauseY1, stopX, stopY, muteX, muteY, loopIX, loopIY;
 float ffX, ffY, rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
-float loopPlaylistX, loopPlaylistY;
+float loopPlaylistX, loopPlaylistY, shuffleX, shuffleY;
 //
 void setup() {
   //Display
-  size(300, 300); //width, height
+  size(400, 400); //width, height
   //fullScreen(); //displayWidth, displayHeight
   //
   //Population: visual data
   buttonReferentMeasure = width * 1/6;
   buttonSide = buttonReferentMeasure;
   spaceWidth = buttonReferentMeasure * 1/4;
-  spaceHeight = buttonReferentMeasure;
   //
   float centerX = width * 1/2; //Local Variable, garbage collected at end of setup(), see println in draw()
   float centerY = height * 1/2;
@@ -33,10 +32,11 @@ void setup() {
   //
   buttonPositionRow = 1;
   muteX = playX1;
-  muteY = playY1 - ( buttonPositionRow * buttonReferentMeasure );
+  muteY = playY1 - ( buttonPositionRow*buttonReferentMeasure );
   //
-  loopIX = playX1;
-  loopIY = playY1 + ( buttonPositionRow * buttonReferentMeasure );
+  buttonPositionColumn = 2;
+  loopIX = playX1 + (buttonPositionColumn*buttonReferentMeasure );
+  loopIY = pauseY1;
   //
   buttonPositionColumn = 1;
   ffX = playX1 + ( buttonPositionColumn*buttonReferentMeasure );
@@ -52,17 +52,21 @@ void setup() {
   prevX = pauseX1 - ( buttonPositionColumn*buttonReferentMeasure );
   prevY = pauseY1;
   //
-  buttonPositionColumn = 3;
+  buttonPositionColumn = 2;
   loop1X = playX1 + ( buttonPositionColumn*buttonReferentMeasure );
   loop1Y = playY1;
   //
+  buttonPositionColumn = 2;
   stopX = playX1 - ( buttonPositionColumn*buttonReferentMeasure );
-  stopY = playY1;
+  stopY = pauseY1;
   //
-  buttonPositionRow = 2;
-  loopPlaylistX = playX1;
-  loopPlaylistY = playY1 + ( buttonPositionRow*buttonReferentMeasure );
+  buttonPositionColumn = 2;
+  loopPlaylistX = playX1 + ( buttonPositionColumn*buttonReferentMeasure );
+  loopPlaylistY = muteY;
   //
+  buttonPositionColumn = 1;
+  shuffleX = playX1 + ( buttonPositionColumn*buttonReferentMeasure );
+  shuffleY = muteY;
 } //End setup
 //
 void draw() {
@@ -80,7 +84,7 @@ void draw() {
   //rect( spaceX, spaceY, spaceWidth, buttonSide );
   //
   //Stop Button
-  //rect( stopX, stopY, buttonSide, buttonSide ); //Layout????
+  rect( stopX, stopY, buttonSide, buttonSide ); //Layout????
   //rect( stopX1, stopY1, buttonSide, buttonSide ); //Square shape
   //
   //Pause Button
@@ -118,27 +122,27 @@ void draw() {
   //
   //Loop the Song Once
   //Students to Develop
-  //rect( loop1X, loop1Y, buttonSide, buttonSide ); //Layout
+  rect( loop1X, loop1Y, buttonSide, buttonSide ); //Layout
   //ellipse( loop1X, loop1Y, loop1WidthDiameter, loop1HeightDiameter );
   //ellipse( loop1X, loop1Y, loop1WidthDiameter, loop1HeightDiameter );
   //triangle( loop1X1, loop1Y1, loop1X2, loop1Y2, loop1X3, loop1Y3 );
   //
   //Loop the Song Infinitely
   //Students to Develop
-  //rect( loopIX, loopIY, buttonSide, buttonSide ); //Layout
+  rect( loopIX, loopIY, buttonSide, buttonSide ); //Layout
   //ellipse( loopIX, loopIY, loopIWidthDiameter, loopIHeightDiameter );
   //ellipse( loopIX, loopIY, loopIWidthDiameter, loopIHeightDiameter );
   //triangle( loopIX1, loopIY1, loopIX2, loopIY2, loopIX3, loopIY3 );
   //
   //Loop the Playlist (infinitely)
   //Students to Develop
-  //rect( loopPlaylistX, loopPlaylistY, buttonSide, buttonSide ); //Layout
+  rect( loopPlaylistX, loopPlaylistY, buttonSide, buttonSide ); //Layout
   //ellipse( loopPlaylistX, loopPlaylistY, loopPlaylistWidthDiameter, loopPlaylistHeightDiameter );
   //ellipse( loopPlaylistX, loopPlaylistY, loopPlaylistWidthDiameter, loopPlaylistHeightDiameter );
   //triangle( loopPlaylistX1, loopPlaylistY1, loopPlaylistX2, loopPlaylistY2, loopPlaylistX3, loopPlaylistY3 );
   //
   //OPTINAL Shuffle
-  //rect( shuffleX, shuffleY, buttonSide, buttonSide ); //Layout
+  rect( shuffleX, shuffleY, buttonSide, buttonSide ); //Layout
   //2-D Shapes
   //
 } //End draw
