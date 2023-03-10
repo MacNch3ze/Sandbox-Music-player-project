@@ -1,8 +1,9 @@
 //Global Variables
 float buttonReferentMeasure;
 float buttonSide, spaceWidth, spaceHeight;
-float playX1, playY1, pauseX2, pauseY2, pauseWidth;
-float pauseX1, pauseY1, stopX, stopY, muteX, muteY, loopIX, loopIY;
+float playX1, playY1, playX2, playY2, playX3, playY3;
+float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth;
+float stopX, stopY, muteX, muteY, loopIX, loopIY;
 float ffX, ffY, rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY, shuffleX, shuffleY;
 //
