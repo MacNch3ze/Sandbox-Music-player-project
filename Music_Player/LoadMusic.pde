@@ -15,16 +15,16 @@ void loadMusic() {
   String NGGYUOFileName = "Never Gonna Give You Up Original.mp3";
   String StopFileName = "Scratch V2.mp3";
   String OpenFileName = "Starting.mp3";
-  song0 = minim.loadFile( musicPathway + grooveFileName );
-  song1 = minim.loadFile( musicPathway + The_SimplestFileName );
-  song2 = minim.loadFile( musicPathway + Start_Your_EnginesFileName );
-  song3 = minim.loadFile( musicPathway + NewsroomFileName );
-  song4 = minim.loadFile( musicPathway + Ghost_WalkFileName );
-  song5 = minim.loadFile( musicPathway + EurekaFileName );
-  song6 = minim.loadFile( musicPathway + AJR_WSVFileName );
-  song7 = minim.loadFile( musicPathway + NGGYUOFileName );
-  soundEffect0 = minim.loadFile( soundEffectPathway + StopFileName );
-  soundEffect1 = minim.loadFile( soundEffectPathway + OpenFileName );
+  songs[0] = minim.loadFile( musicPathway + grooveFileName );
+  songs[1] = minim.loadFile( musicPathway + The_SimplestFileName );
+  songs[2] = minim.loadFile( musicPathway + Start_Your_EnginesFileName );
+  songs[3] = minim.loadFile( musicPathway + NewsroomFileName );
+  songs[4] = minim.loadFile( musicPathway + Ghost_WalkFileName );
+  songs[5] = minim.loadFile( musicPathway + EurekaFileName );
+  songs[6] = minim.loadFile( musicPathway + AJR_WSVFileName );
+  songs[7] = minim.loadFile( musicPathway + NGGYUOFileName );
+  soundEffects[0] = minim.loadFile( soundEffectPathway + StopFileName );
+  soundEffects[1] = minim.loadFile( soundEffectPathway + OpenFileName );
   //
   //println("Music Pathway is", musicPathway);
 }//End loadMusic

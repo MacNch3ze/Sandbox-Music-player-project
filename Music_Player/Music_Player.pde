@@ -7,18 +7,23 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim;
-AudioPlayer song0, song1, song2, song3, song4, song5, song6, song7;
-AudioPlayer soundEffect0, soundEffect1;
 //
-int time = 3000;
+int numberOfSongs = 8;
+AudioPlayer[] songs = new AudioPlayer[numberOfSongs]; //Play List Data Structure
+// Pre-array: AudioPlayer soundEffect0, soundEffect1;
+int numberOfSoundEffects = 2;
+AudioPlayer[] soundEffects = new AudioPlayer[numberOfSoundEffects];
+int currentSong = int ( random( numberOfSongs-1 ) ); //Starts playlist from random song
 //
-Boolean activateWindow=false;
+int time = 7000;
+//
+Boolean activateWindow=false, autoPlayON=false;
 //
 void setup() {
   size(300, 300);
   loadMusic();
   //
-  //Illsutrate Garbage Collection of Local Variable
+  //Illustrate Garbage Collection of Local Variable
   //println("Music Pathway is", musicPathway); //local variable doesn't exit outside of void loadMusic() {}
   //
 } //End setup
@@ -37,13 +42,12 @@ void draw() {
 void keyPressed() {
   //
   //Play sound effect when pressing a key, including delay
-  soundEffect0.play();
-  soundEffect0.rewind();
+  soundEffects[0].play();
+  soundEffects[0].rewind();
   delay(2100); //milliseconds read from draw() println() debugging
   //println( "KeyPrekssed:", soundEffect0.length() );
   //
   keyPressedShortCuts();
-  quitButtons();
   //
 } //End keyPressed
 //
